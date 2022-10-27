@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "o9Acl5gXQ7wZJEm0lR7zkfgu35F+o7s87HOQiETYPwY=",
+  "Source": "monitoria-dotnet-webapi",
+  "BasePath": "_content/monitoria-dotnet-webapi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
