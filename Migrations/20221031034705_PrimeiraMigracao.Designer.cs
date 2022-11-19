@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace monitoria_dotnet_webapi.Migrations
 {
     [DbContext(typeof(ContextoBancoDeDados))]
-    partial class ContextoBancoDeDadosModelSnapshot : ModelSnapshot
+    [Migration("20221031034705_PrimeiraMigracao")]
+    partial class PrimeiraMigracao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,8 +32,7 @@ namespace monitoria_dotnet_webapi.Migrations
                         .HasColumnName("atualizado_em");
 
                     b.Property<string>("AtualizadoPor")
-                        .HasMaxLength(80)
-                        .HasColumnType("varchar(80)")
+                        .HasColumnType("longtext")
                         .HasColumnName("atualizado_por");
 
                     b.Property<string>("Conexao")
@@ -48,10 +49,8 @@ namespace monitoria_dotnet_webapi.Migrations
 
                     b.Property<string>("CriadoPor")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("VARCHAR(80)")
-                        .HasColumnName("criado_por")
-                        .HasDefaultValueSql("'admin@master'");
+                        .HasColumnType("longtext")
+                        .HasColumnName("criado_por");
 
                     b.Property<string>("Dialeto")
                         .IsRequired()
@@ -83,8 +82,7 @@ namespace monitoria_dotnet_webapi.Migrations
                         .HasColumnName("atualizado_em");
 
                     b.Property<string>("AtualizadoPor")
-                        .HasMaxLength(80)
-                        .HasColumnType("varchar(80)")
+                        .HasColumnType("longtext")
                         .HasColumnName("atualizado_por");
 
                     b.Property<DateTime>("CriadoEm")
@@ -95,10 +93,8 @@ namespace monitoria_dotnet_webapi.Migrations
 
                     b.Property<string>("CriadoPor")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("VARCHAR(80)")
-                        .HasColumnName("criado_por")
-                        .HasDefaultValueSql("'admin@master'");
+                        .HasColumnType("longtext")
+                        .HasColumnName("criado_por");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -124,8 +120,7 @@ namespace monitoria_dotnet_webapi.Migrations
                         .HasColumnName("atualizado_em");
 
                     b.Property<string>("AtualizadoPor")
-                        .HasMaxLength(80)
-                        .HasColumnType("varchar(80)")
+                        .HasColumnType("longtext")
                         .HasColumnName("atualizado_por");
 
                     b.Property<DateTime>("CriadoEm")
@@ -136,10 +131,8 @@ namespace monitoria_dotnet_webapi.Migrations
 
                     b.Property<string>("CriadoPor")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("VARCHAR(80)")
-                        .HasColumnName("criado_por")
-                        .HasDefaultValueSql("'admin@master'");
+                        .HasColumnType("longtext")
+                        .HasColumnName("criado_por");
 
                     b.Property<bool?>("Desenvolvedor")
                         .HasColumnType("tinyint(1)")
@@ -215,8 +208,7 @@ namespace monitoria_dotnet_webapi.Migrations
                         .HasColumnName("atualizado_em");
 
                     b.Property<string>("AtualizadoPor")
-                        .HasMaxLength(80)
-                        .HasColumnType("varchar(80)")
+                        .HasColumnType("longtext")
                         .HasColumnName("atualizado_por");
 
                     b.Property<DateTime>("CriadoEm")
@@ -227,10 +219,8 @@ namespace monitoria_dotnet_webapi.Migrations
 
                     b.Property<string>("CriadoPor")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("VARCHAR(80)")
-                        .HasColumnName("criado_por")
-                        .HasDefaultValueSql("'admin@master'");
+                        .HasColumnType("longtext")
+                        .HasColumnName("criado_por");
 
                     b.Property<int>("FaixaEtaria")
                         .HasColumnType("int")
@@ -270,8 +260,7 @@ namespace monitoria_dotnet_webapi.Migrations
                         .HasColumnName("atualizado_em");
 
                     b.Property<string>("AtualizadoPor")
-                        .HasMaxLength(80)
-                        .HasColumnType("varchar(80)")
+                        .HasColumnType("longtext")
                         .HasColumnName("atualizado_por");
 
                     b.Property<DateTime>("CriadoEm")
@@ -282,10 +271,8 @@ namespace monitoria_dotnet_webapi.Migrations
 
                     b.Property<string>("CriadoPor")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("VARCHAR(80)")
-                        .HasColumnName("criado_por")
-                        .HasDefaultValueSql("'admin@master'");
+                        .HasColumnType("longtext")
+                        .HasColumnName("criado_por");
 
                     b.Property<string>("Nivel")
                         .IsRequired()
@@ -311,8 +298,7 @@ namespace monitoria_dotnet_webapi.Migrations
                         .HasColumnName("atualizado_em");
 
                     b.Property<string>("AtualizadoPor")
-                        .HasMaxLength(80)
-                        .HasColumnType("varchar(80)")
+                        .HasColumnType("longtext")
                         .HasColumnName("atualizado_por");
 
                     b.Property<DateTime>("CriadoEm")
@@ -323,10 +309,8 @@ namespace monitoria_dotnet_webapi.Migrations
 
                     b.Property<string>("CriadoPor")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("VARCHAR(80)")
-                        .HasColumnName("criado_por")
-                        .HasDefaultValueSql("'admin@master'");
+                        .HasColumnType("longtext")
+                        .HasColumnName("criado_por");
 
                     b.Property<DateTime?>("FechadaEm")
                         .IsRequired()
@@ -363,8 +347,7 @@ namespace monitoria_dotnet_webapi.Migrations
                         .HasColumnName("atualizado_em");
 
                     b.Property<string>("AtualizadoPor")
-                        .HasMaxLength(80)
-                        .HasColumnType("varchar(80)")
+                        .HasColumnType("longtext")
                         .HasColumnName("atualizado_por");
 
                     b.Property<DateTime>("CriadoEm")
@@ -375,10 +358,8 @@ namespace monitoria_dotnet_webapi.Migrations
 
                     b.Property<string>("CriadoPor")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("VARCHAR(80)")
-                        .HasColumnName("criado_por")
-                        .HasDefaultValueSql("'admin@master'");
+                        .HasColumnType("longtext")
+                        .HasColumnName("criado_por");
 
                     b.Property<int>("JogadorId")
                         .HasColumnType("int")
@@ -410,8 +391,7 @@ namespace monitoria_dotnet_webapi.Migrations
                         .HasColumnName("atualizado_em");
 
                     b.Property<string>("AtualizadoPor")
-                        .HasMaxLength(80)
-                        .HasColumnType("varchar(80)")
+                        .HasColumnType("longtext")
                         .HasColumnName("atualizado_por");
 
                     b.Property<int>("BancoDadosId")
@@ -426,10 +406,8 @@ namespace monitoria_dotnet_webapi.Migrations
 
                     b.Property<string>("CriadoPor")
                         .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("VARCHAR(80)")
-                        .HasColumnName("criado_por")
-                        .HasDefaultValueSql("'admin@master'");
+                        .HasColumnType("longtext")
+                        .HasColumnName("criado_por");
 
                     b.Property<string>("IpPrivado")
                         .IsRequired()

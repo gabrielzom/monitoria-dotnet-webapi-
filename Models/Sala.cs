@@ -4,6 +4,6 @@ public class Sala : CamposPadroes {
   public Servidor Servidor { get; set; }
   public int JogoId { get; set; }
   public Jogo Jogo { get; set; }
-  public List<Pessoa> Pessoas { get; set; }
+  public List<Jogador> Jogadores { get; set; }
 
 }
